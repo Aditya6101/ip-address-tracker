@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | IP Address Tracker</title>
+    <!-- Links of Leaflet JS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""
+    ></script>
+    <!-- Links of Stylesheet -->
+    <link rel="stylesheet" href="./scss/style.css" />
+  </head>
+  <body>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a target="_blank" href="https://github.com/Aditya6101"
+        >Aditya S. Kamble</a
+      >.
+    </div>
+    <section>
+      <div class="info-container">
+        <h1>IP Address Tracker</h1>
+        <div class="input-container">
+          <input id="input" placeholder="Search for any ip address or domain" />
+          <button class="submit-btn">
+            <img src="./images/icon-arrow.svg" alt="" />
+          </button>
+        </div>
+        <div class="user-data-card">
+          <div class="col col-1">
+            <p class="data-field">IP Address</p>
+            <h3 id="ip-address"></h3>
+          </div>
+          <div class="col col-2">
+            <p class="data-field">Location</p>
+            <h3 id="location"></h3>
+          </div>
+          <div class="col col-3">
+            <p class="data-field">Timezone</p>
+            <h3 id="timezone"></h3>
+          </div>
+          <div class="col col-4">
+            <p class="data-field">ISP</p>
+            <h3 id="isp"></h3>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="map-container">
+      <div id="map"></div>
+    </div>
+
+    <script src="./js/app.js"></script>
+  </body>
+</html>

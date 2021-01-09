@@ -1,0 +1,76 @@
+@media screen and (min-width: $breakpoint-desktop) {
+  section {
+    .info-container {
+      .input-container {
+        width: 45%;
+      }
+      .user-data-card {
+        width: 75%;
+      }
+    }
+  }
+}
+
+@media (min-width: $breakpoint-tablet) {
+  section {
+    .info-container {
+      .input-container {
+        width: 50%;
+      }
+      .user-data-card {
+        width: 80%;
+        padding: 1em 1.3em;
+        flex-direction: row;
+        justify-content: space-between;
+        .col {
+          display: flex;
+          flex-direction: column;
+          text-align: left;
+          h3 {
+            max-width: 10ch;
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: $breakpoint-border) {
+  .user-data-card {
+    width: 85%;
+    padding: 1em 1.3em;
+    flex-direction: row;
+    justify-content: space-between;
+    .col {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -30%;
+        height: 90%;
+        width: 2px;
+        margin: auto;
+        background-color: hsla(0, 0%, 59%, 0.611);
+      }
+    }
+    .col-1 {
+      &::before {
+        content: none;
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .input-container {
+    input {
+      &::placeholder {
+        opacity: 0;
+        pointer-events: none;
+      }
+    }
+  }
+}

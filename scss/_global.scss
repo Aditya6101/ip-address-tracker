@@ -1,0 +1,19 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*:hover,
+*:focus {
+  outline: none;
+}
+
+body {
+  width: 100vw;
+  font-size: 18px;
+  font-family: "Rubik", sans-serif;
+  overflow-x: hidden;
+}
