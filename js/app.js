@@ -8,8 +8,9 @@ const showLoc = document.getElementById("location");
 const showTime = document.getElementById("timezone");
 const showISP = document.getElementById("isp");
 
-const geolocationApi = "Your_Api";
-const mapboxToken = "Your_Token";
+const geolocationApi = "at_sQeBXSmzfUA4rWZlZ4l1RPOJGHdWa";
+const mapboxToken =
+  "pk.eyJ1IjoiYWRpdHlhNjEwMSIsImEiOiJja2pvNXUzYzcweXBkMnh0ZmQzM3Rpc2diIn0.1LWDqS5HCvN1P80c08IuJA";
 
 // Fetch Data from API
 
