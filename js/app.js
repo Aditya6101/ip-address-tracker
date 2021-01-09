@@ -44,14 +44,14 @@ async function fetchData(url) {
   showLoc.innerText = `${data.location.city}, ${data.location.country}, ${data.location.geonameId}`;
   showTime.innerText = `UTC ${data.location.timezone}`;
   showISP.innerText = data.isp;
-  ShowUserLocation(lat, lng);
+  await ShowUserLocation(lat, lng);
 }
 
 // Creating the map and setting it's view according to fetched latitude and longitude
 
-function ShowUserLocation(latitude, longitude) {
-  const leafletMap = L.map("map").setView([latitude, longitude], 13);
-  L.tileLayer(
+async function ShowUserLocation(latitude, longitude) {
+  const leafletMap = await L.map("map").setView([latitude, longitude], 13);
+  await L.tileLayer(
     "https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}",
     {
       attribution:
@@ -66,8 +66,8 @@ function ShowUserLocation(latitude, longitude) {
 
   // Creating custom icon
 
-  const customIcon = L.icon({
-    iconUrl: "../images/icon-location.svg",
+  const customIcon = await L.icon({
+    iconUrl: "icon-location.svg",
     iconSize: [46, 56],
     iconAnchor: [22, 94],
     popupAnchor: [-3, -76],
@@ -75,9 +75,9 @@ function ShowUserLocation(latitude, longitude) {
 
   // Adding marker according to fetched latitude and longitude
 
-  const marker = L.marker([latitude, longitude], { icon: customIcon }).addTo(
-    leafletMap
-  );
+  const marker = await L.marker([latitude, longitude], {
+    icon: customIcon,
+  }).addTo(leafletMap);
 }
 
 // Function which will check for validation of the user's input

@@ -153,8 +153,8 @@ section .info-container .user-data-card .col h3 {
   position: absolute;
   width: 100vw;
   height: 70vh;
-  -webkit-transform: translateY(-18%);
-          transform: translateY(-18%);
+  -webkit-transform: translateY(-22%);
+          transform: translateY(-22%);
   z-index: -1;
 }
 
