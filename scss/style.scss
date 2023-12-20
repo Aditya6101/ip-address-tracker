@@ -2,6 +2,9 @@
 @import "./variables";
 @import "./global";
 
+.body {
+  font-family: "Rubik", sans-serif;
+}
 section {
   width: 100%;
   padding: 1.7em 1em;
@@ -58,6 +61,12 @@ section {
         border-bottom-left-radius: 10px;
       }
 
+      .input-error {
+        font-size: 1rem;
+        font-weight: 500;
+        color: rgb(255, 24, 24);
+      }
+
       .submit-btn {
         cursor: pointer;
         height: 3em;
@@ -86,8 +95,16 @@ section {
       box-shadow: 0 3px 30px rgba($color: #000000, $alpha: 0.3);
       border-radius: 10px;
 
+      p {
+        width: 100%;
+        padding: 1.5rem 0;
+        font-size: 1.2rem;
+        font-weight: 500;
+        color: rgb(255, 24, 24);
+      }
+
       .col {
-        margin: 0.5em 0;
+        flex: 1;
 
         .data-field {
           font-weight: $bold;
@@ -95,11 +112,11 @@ section {
           color: $dark-grey;
           letter-spacing: 2px;
           text-transform: uppercase;
-          margin-bottom: 1em;
         }
 
         h3 {
           font-weight: $medium;
+          border: 2px solid red;
           font-size: 1.2rem;
           color: $very-dark-grey;
         }

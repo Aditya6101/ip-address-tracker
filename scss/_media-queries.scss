@@ -40,26 +40,10 @@
     padding: 1em 1.3em;
     flex-direction: row;
     justify-content: space-between;
-    .col {
-      display: flex;
-      flex-direction: column;
-      text-align: left;
-      position: relative;
-      &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: -30%;
-        height: 90%;
-        width: 2px;
-        margin: auto;
-        background-color: hsla(0, 0%, 59%, 0.611);
-      }
-    }
-    .col-1 {
-      &::before {
-        content: none;
-      }
+
+    .col:not(:first-of-type) {
+      border-left: 2px solid hsla(0, 0%, 59%, 0.611);
+      padding-left: 2rem;
     }
   }
 }
