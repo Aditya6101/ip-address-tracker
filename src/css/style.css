@@ -34,7 +34,7 @@ section::before {
   left: 0;
   height: 75%;
   width: 100%;
-  background-image: url("../images/pattern-bg.png");
+  background-image: url("/public/images/pattern-bg.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
